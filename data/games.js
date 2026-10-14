@@ -31,7 +31,9 @@ window.gameDatabase = [
       reviews: null,
       note: "La ficha consultada no expone un resumen de valoraciones para esta región/plataforma."
     },
-    evidence: "La descripción oficial de Google Play identifica el match-3 como mecánica principal."
+    evidence: "La descripción oficial de Google Play identifica el match-3 como mecánica principal.",
+    purchases: { enabled: true, label: "Tiene compras dentro del juego", note: "Puedes pagar para conseguir monedas, vidas o ayudas." },
+    videos: { ad: "iOziEA06a40", gameplay: "yKl1dr20lk4" }
   },
   {
     id: "homescapes",
@@ -65,7 +67,9 @@ window.gameDatabase = [
       reviews: null,
       note: "La ficha consultada no expone un resumen de valoraciones para esta región/plataforma."
     },
-    evidence: "La descripción oficial de Google Play presenta la reforma de la casa y los puzzles match-3 como bucle del juego."
+    evidence: "La descripción oficial de Google Play presenta la reforma de la casa y los puzzles match-3 como bucle del juego.",
+    purchases: { enabled: true, label: "Tiene compras dentro del juego", note: "Puede pedir dinero real para avanzar o conseguir estrellas." },
+    videos: { ad: "uKfooCY2GEw", gameplay: "Er4ePaE5jHs" }
   },
   {
     id: "sled-surfers",
@@ -99,7 +103,9 @@ window.gameDatabase = [
       reviews: null,
       note: "Pendiente de vincular una ficha exacta de App Store."
     },
-    evidence: "La ficha de Google Play confirma desarrollador, clasificación, volumen de reseñas y descargas; no se marca engaño sin evidencia del anuncio."
+    evidence: "La ficha de Google Play confirma desarrollador, clasificación, volumen de reseñas y descargas; no se marca engaño sin evidencia del anuncio.",
+    purchases: { enabled: true, label: "Tiene compras dentro del juego", note: "Incluye compras y anuncios; algunas reseñas mencionan pagar por tickets." },
+    videos: { ad: null, gameplay: "4odMDPEa_Fk" }
   },
   {
     id: "royal-match",
@@ -133,7 +139,9 @@ window.gameDatabase = [
       reviews: null,
       note: "Pendiente de vincular una ficha exacta de App Store."
     },
-    evidence: "La descripción oficial de Google Play define puzzles y decoración del castillo; el veredicto de anuncios requiere revisar creatividades concretas."
+    evidence: "La descripción oficial de Google Play define puzzles y decoración del castillo; el veredicto de anuncios requiere revisar creatividades concretas.",
+    purchases: { enabled: true, label: "Tiene compras dentro del juego", note: "Incluye compras de elementos o ayudas para progresar." },
+    videos: { ad: null, gameplay: null }
   },
   {
     id: "candy-crush-saga",
@@ -167,6 +175,8 @@ window.gameDatabase = [
       reviews: null,
       note: "La puntuación de esta base se toma de Google Play hasta capturar el resumen equivalente de App Store."
     },
-    evidence: "La ficha oficial de Google Play describe explícitamente el match-3 como mecánica central."
+    evidence: "La ficha oficial de Google Play describe explícitamente el match-3 como mecánica central.",
+    purchases: { enabled: true, label: "Tiene compras dentro del juego", note: "Incluye compras y anuncios dentro de la aplicación." },
+    videos: { ad: "wArR2NAGtCA", gameplay: "yKl1dr20lk4" }
   }
 ];
