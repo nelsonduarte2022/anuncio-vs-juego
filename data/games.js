@@ -1,0 +1,172 @@
+window.gameDatabase = [
+  {
+    id: "gardenscapes",
+    name: "Gardenscapes",
+    category: "ciudad",
+    image: "assets/gardenscapes.png",
+    status: "Sin veredicto",
+    statusClass: "neutral",
+    score: "4,8",
+    reviews: "13,3 M reseñas",
+    promised: "Resolver situaciones para salvar el jardín",
+    real: "Combinar piezas y restaurar un jardín",
+    stars: "★★★★★",
+    review: "Los acertijos del anuncio existen, pero ocupan poco. La mayor parte del tiempo combinas piezas para conseguir estrellas.",
+    by: "Resumen de ficha y reseñas de Google Play · consulta 13 oct 2026",
+    developer: "Playrix",
+    googlePlay: {
+      packageId: "com.playrix.gardenscapes",
+      rating: 4.8,
+      reviews: 13300000,
+      downloads: "500M+",
+      updated: "2026-09-30",
+      description: "Create your own garden and solve match-3 puzzles in this redesign game!",
+      url: "https://play.google.com/store/apps/details?id=com.playrix.gardenscapes"
+    },
+    appStore: {
+      url: "https://apps.apple.com/us/app/gardenscapes/id1193564816",
+      category: "Puzzle",
+      developer: "Playrix",
+      rating: null,
+      reviews: null,
+      note: "La ficha consultada no expone un resumen de valoraciones para esta región/plataforma."
+    },
+    evidence: "La descripción oficial de Google Play identifica el match-3 como mecánica principal."
+  },
+  {
+    id: "homescapes",
+    name: "Homescapes",
+    category: "puzzle",
+    image: "assets/homescapes.png",
+    status: "Reportado por usuarios",
+    statusClass: "red",
+    score: "4,8",
+    reviews: "13,4 M reseñas",
+    promised: "Salvar a Austin con puzzles de rescate",
+    real: "Combinar piezas y decorar una casa",
+    stars: "★★★★★",
+    review: "El anuncio me tuvo tomando decisiones para salvar a una persona. El juego real son niveles match-3 y reformas de la casa.",
+    by: "Resumen de ficha y reseñas de Google Play · consulta 13 oct 2026",
+    developer: "Playrix",
+    googlePlay: {
+      packageId: "com.playrix.homescapes",
+      rating: 4.8,
+      reviews: 13400000,
+      downloads: "500M+",
+      updated: "2026-10-07",
+      description: "Help Austin renovate his home and solve exciting match-3 puzzles along the way!",
+      url: "https://play.google.com/store/apps/details?id=com.playrix.homescapes"
+    },
+    appStore: {
+      url: "https://apps.apple.com/us/app/homescapes/id1292510839",
+      category: "Puzzle",
+      developer: "Playrix",
+      rating: null,
+      reviews: null,
+      note: "La ficha consultada no expone un resumen de valoraciones para esta región/plataforma."
+    },
+    evidence: "La descripción oficial de Google Play presenta la reforma de la casa y los puzzles match-3 como bucle del juego."
+  },
+  {
+    id: "sled-surfers",
+    name: "Sled Surfers",
+    category: "supervivencia",
+    image: "assets/sled-surfers.jpg",
+    status: "Por revisar",
+    statusClass: "neutral",
+    score: "4,7",
+    reviews: "274 mil reseñas",
+    promised: "Bajar por pistas nevadas y esquivar obstáculos",
+    real: "Carrera arcade sobre nieve",
+    stars: "★★★★★",
+    review: "La ficha oficial describe carreras por pendientes nevadas, obstáculos y surf sobre la nieve. Falta documentar una campaña publicitaria concreta.",
+    by: "Ficha de Google Play · consulta 13 oct 2026",
+    developer: "CrazyLabs LTD",
+    googlePlay: {
+      packageId: "com.sled.surfers.game",
+      rating: 4.7,
+      reviews: 274000,
+      downloads: "10M+",
+      updated: null,
+      description: "Race down snowy and icy slopes, dodge obstacles, and surf your way to victory!",
+      url: "https://play.google.com/store/apps/details?id=com.sled.surfers.game"
+    },
+    appStore: {
+      url: "https://apps.apple.com/us/search?term=Sled%20Surfers",
+      category: null,
+      developer: null,
+      rating: null,
+      reviews: null,
+      note: "Pendiente de vincular una ficha exacta de App Store."
+    },
+    evidence: "La ficha de Google Play confirma desarrollador, clasificación, volumen de reseñas y descargas; no se marca engaño sin evidencia del anuncio."
+  },
+  {
+    id: "royal-match",
+    name: "Royal Match",
+    category: "puzzle",
+    image: "assets/royal-match.jpg",
+    status: "Sin veredicto",
+    statusClass: "neutral",
+    score: "4,8",
+    reviews: "10,9 M reseñas",
+    promised: "Salvar al rey con decisiones y minijuegos",
+    real: "Resolver niveles match-3 y decorar un castillo",
+    stars: "★★★★★",
+    review: "Las partidas reales son niveles de combinar piezas para decorar el castillo. Los anuncios de decisiones no representan el bucle principal.",
+    by: "Resumen de ficha y reseñas de Google Play · consulta 13 oct 2026",
+    developer: "Dream Games, Ltd.",
+    googlePlay: {
+      packageId: "com.dreamgames.royalmatch",
+      rating: 4.8,
+      reviews: 10900000,
+      downloads: "100M+",
+      updated: "2026-09-25",
+      description: "Decorate King Robert's Castle by solving puzzles along the way!",
+      url: "https://play.google.com/store/apps/details?id=com.dreamgames.royalmatch"
+    },
+    appStore: {
+      url: "https://apps.apple.com/us/search?term=Royal%20Match",
+      category: null,
+      developer: null,
+      rating: null,
+      reviews: null,
+      note: "Pendiente de vincular una ficha exacta de App Store."
+    },
+    evidence: "La descripción oficial de Google Play define puzzles y decoración del castillo; el veredicto de anuncios requiere revisar creatividades concretas."
+  },
+  {
+    id: "candy-crush-saga",
+    name: "Candy Crush Saga",
+    category: "puzzle",
+    image: "assets/candy-crush.jpg",
+    status: "Mecánica confirmada",
+    statusClass: "green",
+    score: "4,7",
+    reviews: "38,9 M reseñas",
+    promised: "Combinar caramelos para superar niveles",
+    real: "Combinar caramelos (match-3)",
+    stars: "★★★★★",
+    review: "La mecánica que muestran los anuncios es también la que define las partidas: combinar caramelos y superar niveles.",
+    by: "Ficha de Google Play · consulta 13 oct 2026",
+    developer: "King",
+    googlePlay: {
+      packageId: "com.king.candycrushsaga",
+      rating: 4.7,
+      reviews: 38900000,
+      downloads: "1B+",
+      updated: "2026-10-01",
+      description: "Match 3 candies to blast sugar! Spread jam and master the sweetest puzzle game.",
+      url: "https://play.google.com/store/apps/details?id=com.king.candycrushsaga"
+    },
+    appStore: {
+      url: "https://apps.apple.com/us/app/candy-crush-saga/id553834731",
+      category: "Games",
+      developer: "King",
+      rating: null,
+      reviews: null,
+      note: "La puntuación de esta base se toma de Google Play hasta capturar el resumen equivalente de App Store."
+    },
+    evidence: "La ficha oficial de Google Play describe explícitamente el match-3 como mecánica central."
+  }
+];

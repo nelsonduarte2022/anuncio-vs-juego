@@ -1,162 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Anuncio vs. juego: ¿es el juego que viste?</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Antes de descargar | Juegos como los del anuncio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
 <style>
-:root{
-  box-sizing:border-box;
-  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
-  --bg:#EEF1F6;--fg:#161E2E;--muted:#55607A;--panel:#FFFFFF;--line:#CBD3E1;
-  --ad:#2B4FD8;--adbg:#E3E9FC;--real:#8A4B00;--realbg:#FBEBD3;
-  --ok:#0B6B3A;--okbg:#D5F0E0;--mid:#7A5A00;--midbg:#FAEFC4;--bad:#A3171E;--badbg:#FADADC;
-  font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;
-}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#0F1522;--fg:#E8ECF5;--muted:#9AA6C0;--panel:#182033;--line:#2C3750;
-  --ad:#9DB2FF;--adbg:#1F2A52;--real:#F3B766;--realbg:#3A2A12;
-  --ok:#7FDBA6;--okbg:#12352371;--mid:#EBCB6B;--midbg:#3A3213;--bad:#FF9EA3;--badbg:#431A1E;}}
-:root[data-theme="dark"]{
-  --bg:#0F1522;--fg:#E8ECF5;--muted:#9AA6C0;--panel:#182033;--line:#2C3750;
-  --ad:#9DB2FF;--adbg:#1F2A52;--real:#F3B766;--realbg:#3A2A12;
-  --ok:#7FDBA6;--okbg:#123523;--mid:#EBCB6B;--midbg:#3A3213;--bad:#FF9EA3;--badbg:#431A1E;}
-html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
-*,*::before,*::after{box-sizing:inherit}
-body{margin:0;background:var(--bg);color:var(--fg);line-height:1.55;font-size:17px}
-main{max-width:960px;margin:0 auto;padding:40px 20px 72px}
-h1{font-size:clamp(2.1rem,6vw,3.6rem);line-height:1.04;font-weight:800;letter-spacing:-.02em;margin:0 0 16px;max-width:15ch}
-h2{font-size:1.5rem;font-weight:800;margin:56px 0 12px;letter-spacing:-.01em}
-p{margin:0 0 14px;max-width:62ch}
-.lead{font-size:1.15rem;color:var(--muted);max-width:56ch}
-.demo{margin-top:32px;border:2px solid var(--fg);border-radius:6px;background:var(--panel)}
-.pick{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;padding:14px 16px;border-bottom:2px solid var(--fg)}
-.pick label{font-weight:600}
-select{font:inherit;padding:8px 10px;border:2px solid var(--fg);border-radius:4px;background:var(--bg);color:var(--fg);max-width:100%}
-select:focus-visible,button:focus-visible{outline:3px solid var(--ad);outline-offset:2px}
-.split{display:grid;grid-template-columns:1fr 1fr}
-.side{padding:18px 16px}
-.side+.side{border-left:2px solid var(--fg)}
-.tag{display:inline-block;font-weight:800;font-size:.95rem;padding:2px 10px;border-radius:3px;margin-bottom:10px}
-.t-ad{background:var(--adbg);color:var(--ad)}
-.t-real{background:var(--realbg);color:var(--real)}
-.big{font-size:1.35rem;font-weight:600;line-height:1.25;margin:0 0 8px}
-.small{color:var(--muted);font-size:.95rem;margin:0}
-.ver{padding:12px 0;border-top:1px dashed var(--line)}
-.ver:first-of-type{border-top:0;padding-top:0}
-.vh{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:6px}
-.chip{display:inline-block;margin:2px 6px 2px 0;padding:2px 9px;border-radius:3px;font-size:.92rem;background:var(--realbg);color:var(--real)}
-.chip.core{font-weight:800}
-.badge{font-weight:800;padding:3px 10px;border-radius:3px;font-size:.92rem}
-.match{background:var(--okbg);color:var(--ok)}.partial{background:var(--midbg);color:var(--mid)}.mismatch{background:var(--badbg);color:var(--bad)}
-.foot{padding:12px 16px;border-top:2px solid var(--fg);color:var(--muted);font-size:.92rem}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin-top:16px}
-.stat b{display:block;font-size:2.4rem;font-weight:800;line-height:1}
-.stat span{color:var(--muted);font-size:.97rem}
-.rule{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin-top:12px;max-width:640px}
-.rule dt{font-weight:800}.rule dd{margin:0;color:var(--muted)}
-ul.offer{padding-left:1.1em;max-width:62ch}ul.offer li{margin-bottom:8px}
-.note{margin-top:40px;padding:12px 14px;border-left:4px solid var(--fg);background:var(--panel);font-size:.95rem;max-width:62ch}
-@media (max-width:640px){.split{grid-template-columns:1fr}.side+.side{border-left:0;border-top:2px solid var(--fg)}}
-@media (prefers-reduced-motion:no-preference){.side{animation:in .25s ease-out}@keyframes in{from{opacity:.4}to{opacity:1}}}
+:root{--ink:#242322;--muted:#716d68;--cream:#f8f4ed;--card:#fffdf9;--line:#e6ded2;--coral:#ee6d53;--coral-dark:#b84a37;--yellow:#f4c84e;--mint:#d9eee1;--lavender:#e4e3f5;box-sizing:border-box;font-family:"DM Sans",sans-serif}*{box-sizing:inherit}body{margin:0;background:var(--cream);color:var(--ink);line-height:1.45}button,input{font:inherit}button{cursor:pointer}.wrap{max-width:1180px;margin:auto;padding:0 28px}.top{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.logo{display:flex;align-items:center;gap:10px;font-weight:700}.logo-mark{width:31px;height:31px;border-radius:10px 10px 10px 2px;background:var(--coral);color:#fff;display:grid;place-items:center;font-weight:700}.nav{display:flex;gap:25px;align-items:center;color:var(--muted);font-size:.9rem}.nav a{color:inherit;text-decoration:none}.nav a:first-child{color:var(--ink);font-weight:700}.share{border:1px solid var(--ink);background:transparent;border-radius:30px;padding:8px 14px;color:var(--ink)}.hero{padding:67px 0 54px;display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}.kicker{color:var(--coral-dark);font-size:.77rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase}.hero h1{font-family:Fraunces,serif;font-size:clamp(3rem,6vw,5.8rem);line-height:.95;letter-spacing:-.055em;max-width:700px;margin:14px 0 23px}.hero h1 em{font-style:normal;color:var(--coral)}.hero-copy{font-size:1.08rem;color:var(--muted);max-width:500px;margin:0 0 28px}.search{background:var(--card);border:1px solid var(--ink);display:flex;align-items:center;max-width:530px;padding:6px 7px 6px 17px;border-radius:5px;box-shadow:5px 5px 0 var(--yellow)}.search input{border:0;background:transparent;outline:0;min-width:0;flex:1;padding:11px 6px;font-size:.95rem}.search button{border:0;background:var(--ink);color:#fff;padding:12px 18px;border-radius:3px;font-weight:700}.hero-art{position:relative;min-height:350px}.hero-photo{width:75%;height:310px;object-fit:cover;border-radius:4px 70px 4px 70px;display:block;margin-left:auto;filter:saturate(.86)}.note{position:absolute;left:0;bottom:18px;width:220px;background:var(--card);padding:17px 19px;border:1px solid var(--line);box-shadow:8px 8px 0 var(--yellow);transform:rotate(-3deg)}.note b{font-size:1.25rem;display:block}.note span{font-size:.8rem;color:var(--muted)}.scribble{position:absolute;right:3%;top:8px;color:var(--coral);font-size:2.2rem;transform:rotate(15deg)}.section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:20px}.section-head h2{font-family:Fraunces,serif;font-size:2.1rem;letter-spacing:-.04em;margin:0}.section-head p{margin:0;color:var(--muted);font-size:.9rem}.chips{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:28px}.chip{background:transparent;border:1px solid var(--line);color:var(--muted);border-radius:30px;padding:9px 15px}.chip.active,.chip:hover{background:var(--ink);border-color:var(--ink);color:#fff}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.game-card{background:var(--card);border:1px solid var(--line);border-radius:7px;overflow:hidden;transition:transform .2s,box-shadow .2s}.game-card:hover{transform:translateY(-4px);box-shadow:0 12px 24px rgba(76,57,35,.1)}.game-image{height:190px;position:relative;overflow:hidden}.game-image img{width:100%;height:100%;object-fit:cover;display:block}.status{position:absolute;top:13px;left:13px;background:var(--card);padding:6px 9px;font-size:.72rem;font-weight:700;border-radius:4px}.status.red{color:var(--coral-dark)}.status.green{color:#367356}.card-body{padding:18px}.card-title{display:flex;justify-content:space-between;gap:12px}.card-title h3{font-size:1.1rem;margin:0 0 3px}.stars{color:#d99f13;white-space:nowrap;font-size:.85rem}.rating{font-size:.75rem;color:var(--muted)}.promise{display:flex;gap:10px;padding:13px 0;margin:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:.82rem}.promise strong{font-weight:500;color:var(--muted)}.promise span{font-weight:700}.review{font-size:.84rem;margin:0 0 15px}.review:before{content:"“";font-family:Fraunces,serif;color:var(--coral);font-size:1.5rem;vertical-align:-5px;margin-right:3px}.review-by{color:var(--muted);font-size:.72rem}.details{width:100%;border:1px solid var(--ink);background:transparent;padding:10px;border-radius:3px;margin-top:13px;font-weight:700}.details:hover{background:var(--ink);color:#fff}.empty{grid-column:1/-1;padding:38px;text-align:center;color:var(--muted);background:var(--card);border:1px dashed var(--line)}.how{display:grid;grid-template-columns:.9fr 1.1fr;gap:65px;margin:85px 0 65px;padding-top:36px;border-top:1px solid var(--line)}.how h2{font-family:Fraunces,serif;font-size:2.4rem;line-height:1;margin:0}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.step{border-top:3px solid var(--yellow);padding-top:12px}.step b{font-family:Fraunces,serif;font-size:1.45rem}.step p{color:var(--muted);font-size:.84rem;margin:8px 0}.footer{border-top:1px solid var(--line);padding:24px 0 35px;color:var(--muted);font-size:.78rem;display:flex;justify-content:space-between;gap:20px}.overlay{display:none;position:fixed;inset:0;background:rgba(36,35,34,.44);z-index:3;padding:20px;place-items:center}.overlay.open{display:grid}.modal{background:var(--card);max-width:520px;width:100%;padding:25px;border-radius:6px;box-shadow:12px 12px 0 var(--yellow)}.modal h2{font-family:Fraunces,serif;font-size:2rem;margin:0 0 12px}.modal p{color:var(--muted);font-size:.9rem}.close{float:right;border:0;background:transparent;font-size:1.5rem}.toast{position:fixed;right:22px;bottom:22px;background:var(--ink);color:#fff;padding:13px 17px;border-radius:4px;display:none;font-size:.84rem}.toast.show{display:block}@media(max-width:850px){.hero{grid-template-columns:1fr;gap:28px;padding-top:45px}.hero-art{min-height:260px}.hero-photo{height:240px;width:82%}.grid{grid-template-columns:repeat(2,1fr)}.how{grid-template-columns:1fr;gap:28px;margin-top:60px}}@media(max-width:600px){.wrap{padding:0 18px}.top{height:66px}.nav a{display:none}.share{padding:7px 11px}.hero h1{font-size:3.2rem}.hero-photo{width:88%;height:210px}.note{width:190px;padding:13px}.grid{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:7px}.steps{grid-template-columns:1fr}.footer{display:block}.footer span{display:block;margin-top:7px}}
 </style>
 </head>
 <body>
-<main>
-  <h1>¿Es el juego que viste en el anuncio?</h1>
-  <p class="lead">Ves un anuncio donde salvas a alguien del frío. Descargas el juego y resulta que combinas caramelos. Aquí comparamos lo que prometen los anuncios con lo que el juego realmente es.</p>
-
-  <section class="demo" aria-label="Demostración">
-    <div class="pick">
-      <label for="sel">Elige un anuncio de ejemplo:</label>
-      <select id="sel"></select>
-    </div>
-    <div class="split">
-      <div class="side" id="ad"></div>
-      <div class="side" id="real"></div>
-    </div>
-    <div class="foot" id="foot"></div>
-  </section>
-
-  <h2>Cómo decidimos si un anuncio engaña</h2>
-  <p>Para cada anuncio anotamos la mecánica principal que muestra. Luego revisamos cada versión del juego y miramos qué papel tiene esa mecánica.</p>
-  <dl class="rule">
-    <dt class="match badge" style="align-self:start">Coincide</dt><dd>La mecánica del anuncio es el núcleo del juego.</dd>
-    <dt class="partial badge" style="align-self:start">Parcial</dt><dd>Existe, pero es secundaria.</dd>
-    <dt class="mismatch badge" style="align-self:start">No coincide</dt><dd>El juego no tiene esa mecánica.</dd>
-  </dl>
-
-  <h2>Lo que se puede responder</h2>
-  <div class="stats" id="stats"></div>
-
-  <h2>Qué ofrece el servicio</h2>
-  <ul class="offer">
-    <li>Una ficha por juego con sus anuncios, la mecánica prometida y la real.</li>
-    <li>Evidencias guardadas: grabación del anuncio y del juego, con fecha.</li>
-    <li>Reportes de personas, marcados como verificados o rechazados.</li>
-    <li>Historial por versión: se ve si un juego corrigió su anuncio, o el juego, tras una actualización.</li>
-  </ul>
-
-  <p class="note">Todos los juegos, anuncios y cifras de esta página son ejemplos ficticios para mostrar cómo funciona. Aún no representan datos reales.</p>
+<header class="top wrap"><a class="logo" href="."><span class="logo-mark">✓</span> Antes de descargar</a><nav class="nav"><a href="#juegos">Explorar juegos</a><a href="#como-funciona">Cómo funciona</a><button class="share" id="share">Compartir</button></nav></header>
+<main class="wrap">
+  <section class="hero"><div><div class="kicker">Decide antes de instalar</div><h1>El juego del anuncio, <em>de verdad.</em></h1><p class="hero-copy">Busca un juego y descubre si la partida se parece a lo que viste. Opiniones de personas que ya lo han jugado, sin sorpresas.</p><form class="search" id="search-form"><input id="search" type="search" placeholder="Busca un juego..." aria-label="Busca un juego"><button type="submit">Buscar</button></form></div><div class="hero-art"><span class="scribble">¿Será verdad?</span><img class="hero-photo" src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=900&q=85" alt="Persona jugando a un videojuego portátil"><div class="note"><b>4 de cada 10</b><span>anuncios no enseñan la mecánica principal</span></div></div></section>
+  <section id="juegos"><div class="section-head"><div><h2>Juegos populares</h2><p>Lo que promete el anuncio comparado con la experiencia real.</p></div></div><div class="chips" aria-label="Filtrar juegos"><button class="chip active" data-category="all">Todos</button><button class="chip" data-category="puzzle">Acertijos</button><button class="chip" data-category="supervivencia">Supervivencia</button><button class="chip" data-category="ciudad">Construcción</button></div><div class="grid" id="games"></div></section>
+  <section class="how" id="como-funciona"><h2>Para que descargues con los ojos abiertos.</h2><div class="steps"><div class="step"><b>01. Busca</b><p>Encuentra el juego que viste en un anuncio, incluso si no recuerdas el nombre exacto.</p></div><div class="step"><b>02. Compara</b><p>Lee qué aparece en la publicidad y cuál es la mecánica que más tiempo ocupa realmente.</p></div><div class="step"><b>03. Decide</b><p>Mira reseñas de jugadores y elige si te compensa instalarlo.</p></div></div></section>
+  <footer class="footer"><span>Antes de descargar · Comunidad independiente</span><span>Las opiniones se verifican con capturas, vídeo o partida compartida.</span></footer>
 </main>
-
-<script>
-const MECH={rescue:"Rescatar a alguien resolviendo un puzzle",match3:"Combinar piezas (match-3)",door:"Elegir qué puerta abrir",city:"Construir y mejorar una ciudad",surv:"Gestionar la supervivencia de una familia",pin:"Sacar pasadores"};
-const GAMES=[
- {title:"Frozen Rescue Saga",ad:"Salva a una persona del frío",promised:"rescue",
-  versions:[{v:"1.0",real:{match3:"core"}},{v:"1.5",real:{match3:"core",rescue:"secondary"}}]},
- {title:"Door Dilemma",ad:"Elige qué puerta abrir",promised:"door",
-  versions:[{v:"2.0",real:{city:"core"}}]},
- {title:"Family Survival Story",ad:"Ayuda a una familia a sobrevivir",promised:"surv",
-  versions:[{v:"3.1",real:{city:"core"}},{v:"3.2",real:{surv:"core",city:"secondary"}}]},
- {title:"Honest Pins",ad:"Saca los pasadores",promised:"pin",
-  versions:[{v:"1.0",real:{pin:"core"}}]}
-];
-const VERDICT={core:["match","Coincide"],secondary:["partial","Parcial"],none:["mismatch","No coincide"]};
-const verdict=(g,ver)=>VERDICT[ver.real[g.promised]||"none"];
-const ROLE={core:"principal",secondary:"secundaria"};
-const $=id=>document.getElementById(id);
-const sel=$("sel");
-GAMES.forEach((g,i)=>{const o=document.createElement("option");o.value=i;o.textContent=g.title+": «"+g.ad+"»";sel.appendChild(o)});
-
-function show(){
-  const g=GAMES[sel.value];
-  $("ad").innerHTML='<span class="tag t-ad">El anuncio promete</span><p class="big"></p><p class="small"></p>';
-  $("ad").children[1].textContent="«"+g.ad+"»";
-  $("ad").children[2].textContent="Mecánica mostrada: "+MECH[g.promised];
-  const r=$("real");
-  r.innerHTML='<span class="tag t-real">El juego realmente es</span>';
-  g.versions.forEach(ver=>{
-    const [cls,txt]=verdict(g,ver);
-    const d=document.createElement("div");d.className="ver";
-    const h=document.createElement("div");h.className="vh";
-    const vs=document.createElement("strong");vs.textContent="Versión "+ver.v;
-    const b=document.createElement("span");b.className="badge "+cls;b.textContent=txt;
-    h.append(vs,b);d.appendChild(h);
-    Object.entries(ver.real).forEach(([m,role])=>{
-      const c=document.createElement("span");c.className="chip "+role;
-      c.textContent=MECH[m]+" ("+ROLE[role]+")";d.appendChild(c);
-    });
-    r.appendChild(d);
-  });
-  const first=verdict(g,g.versions[0])[1],last=verdict(g,g.versions[g.versions.length-1])[1];
-  $("foot").textContent=g.versions.length>1
-    ? "Tras la actualización a la versión "+g.versions[g.versions.length-1].v+": "+first+" → "+last+"."
-    : "Solo hay una versión revisada de este juego.";
-}
-sel.addEventListener("change",show);show();
-
-const latest=g=>verdict(g,g.versions[g.versions.length-1])[0];
-const bad=GAMES.filter(g=>latest(g)==="mismatch").length;
-const changed=GAMES.filter(g=>g.versions.length>1&&verdict(g,g.versions[0])[0]!==latest(g)).length;
-[[Math.round(100*bad/GAMES.length)+"%","de los juegos de ejemplo tiene un anuncio cuya mecánica no existe en su versión más reciente"],
- [changed+" de "+GAMES.length,"cambió su veredicto después de una actualización"],
- [GAMES.length+"","juegos comparados en esta demostración"]].forEach(([n,t])=>{
-  const d=document.createElement("div");d.className="stat";
-  const b=document.createElement("b");b.textContent=n;const s=document.createElement("span");s.textContent=t;
-  d.append(b,s);$("stats").appendChild(d);
-});
+<div class="overlay" id="overlay"><article class="modal"><button class="close" id="close" aria-label="Cerrar">×</button><div id="modal-content"></div></article></div><div class="toast" id="toast" role="status"></div>
+<script src="data/games.js"></script><script>
+const games = window.gameDatabase;
+const gamesEl=document.querySelector('#games');
+function render(list=games){gamesEl.innerHTML=list.length?list.map((g,i)=>`<article class="game-card"><div class="game-image"><img src="${g.image}" alt="Imagen de ${g.name}" loading="lazy"><span class="status ${g.statusClass}">${g.status}</span></div><div class="card-body"><div class="card-title"><div><h3>${g.name}</h3><span class="rating">${g.score}/5 · ${g.reviews}</span></div><span class="stars" aria-label="${g.score} de 5 estrellas">${g.stars}</span></div><div class="promise"><strong>Anuncio:</strong><span>${g.promised}</span></div><div class="promise"><strong>Realidad:</strong><span>${g.real}</span></div><p class="review">${g.review}</p><span class="review-by">${g.by}</span><button class="details" data-index="${games.indexOf(g)}">Ver la historia completa</button></div></article>`).join(''):'<p class="empty">No hemos encontrado ese juego todavía. Prueba con otro nombre.</p>';document.querySelectorAll('.details').forEach(b=>b.addEventListener('click',()=>openModal(games[b.dataset.index])))}
+function openModal(g){document.querySelector('#modal-content').innerHTML=`<div class="kicker">Ficha verificada</div><h2>${g.name}</h2><p><b>En el anuncio:</b> ${g.promised}</p><p><b>En el juego:</b> ${g.real}</p><p>${g.review}</p><p class="review-by">${g.by} · Desarrollador: ${g.developer}</p><p class="review-by">Google Play: ${g.googlePlay.rating}/5 · ${g.googlePlay.downloads} descargas · ${g.googlePlay.reviews.toLocaleString('es-ES')} reseñas</p><p><a href="${g.googlePlay.url}" target="_blank" rel="noreferrer">Abrir Google Play</a> · <a href="${g.appStore.url}" target="_blank" rel="noreferrer">Abrir App Store</a></p><p class="review-by">${g.evidence}</p>`;document.querySelector('#overlay').classList.add('open')}
+document.querySelectorAll('[data-category]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));b.classList.add('active');render(b.dataset.category==='all'?games:games.filter(g=>g.category===b.dataset.category))}));
+document.querySelector('#search-form').addEventListener('submit',e=>{e.preventDefault();const q=document.querySelector('#search').value.toLowerCase().trim();render(games.filter(g=>(g.name+g.promised+g.real).toLowerCase().includes(q)));document.querySelector('#juegos').scrollIntoView({behavior:'smooth'})});document.querySelector('#close').addEventListener('click',()=>document.querySelector('#overlay').classList.remove('open'));document.querySelector('#overlay').addEventListener('click',e=>{if(e.target.id==='overlay')e.currentTarget.classList.remove('open')});document.querySelector('#share').addEventListener('click',()=>{navigator.clipboard?.writeText(location.href);const t=document.querySelector('#toast');t.textContent='Enlace copiado para compartir';t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)});render();
 </script>
 </body>
 </html>
