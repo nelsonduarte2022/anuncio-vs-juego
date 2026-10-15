@@ -178,5 +178,77 @@ window.gameDatabase = [
     evidence: "La ficha oficial de Google Play describe explícitamente el match-3 como mecánica central.",
     purchases: { enabled: true, label: "Tiene compras dentro del juego", note: "Incluye compras y anuncios dentro de la aplicación." },
     videos: { ad: "wArR2NAGtCA", gameplay: "yKl1dr20lk4" }
+  },
+  {
+    id: "angry-birds-2",
+    name: "Angry Birds 2",
+    category: "supervivencia",
+    image: "https://upload.wikimedia.org/wikipedia/en/d/d4/Angry_Birds_2_screenshot.png",
+    status: "Por revisar",
+    statusClass: "neutral",
+    score: "4,2",
+    reviews: "6,4 M reseñas",
+    promised: "Lanzar pájaros y derribar estructuras",
+    real: "Resolver niveles de físicas y conseguir mejoras",
+    stars: "★★★★☆",
+    review: "El juego gira alrededor de lanzar pájaros, superar niveles y mejorar el nido con eventos y compras opcionales.",
+    by: "Ficha de Google Play · consulta 13 oct 2026",
+    developer: "Rovio Entertainment Corporation",
+    googlePlay: {
+      packageId: "com.rovio.baba",
+      rating: 4.2,
+      reviews: 6400000,
+      downloads: "100M+",
+      updated: "2026-10-02",
+      description: "Join the Angry Birds in an adventure of slingshot physics and challenging levels!",
+      url: "https://play.google.com/store/apps/details?id=com.rovio.baba"
+    },
+    appStore: {
+      url: "https://apps.apple.com/us/app/angry-birds-2/id880047117",
+      category: "Games",
+      developer: "Rovio Entertainment Oyj",
+      rating: null,
+      reviews: null,
+      note: "La puntuación de esta base se toma de Google Play hasta capturar el resumen equivalente de App Store."
+    },
+    evidence: "La ficha oficial confirma los niveles de lanzamiento, las físicas y la progresión mediante mejoras.",
+    purchases: { enabled: true, label: "Tiene compras dentro del juego", note: "Incluye compras opcionales para conseguir recursos o ventajas." },
+    videos: { ad: null, gameplay: null }
+  },
+  {
+    id: "plants-vs-zombies-2",
+    name: "Plants vs. Zombies 2",
+    category: "supervivencia",
+    image: "assets/angry-birds-2.jpg",
+    status: "Por revisar",
+    statusClass: "neutral",
+    score: "4,4",
+    reviews: "7,1 M reseñas",
+    promised: "Defender tu jardín contra zombis",
+    real: "Plantar defensas y superar mundos con recursos limitados",
+    stars: "★★★★☆",
+    review: "La partida real conserva la defensa del jardín, pero añade mundos, coleccionables, eventos y compras dentro del juego.",
+    by: "Ficha de Google Play · consulta 13 oct 2026",
+    developer: "ELECTRONIC ARTS",
+    googlePlay: {
+      packageId: "com.ea.game.pvz2_row",
+      rating: 4.4,
+      reviews: 7100000,
+      downloads: "100M+",
+      updated: "2026-09-29",
+      description: "Get ready to soil your plants as you battle zombies from the dawn of time to the distant future!",
+      url: "https://play.google.com/store/apps/details?id=com.ea.game.pvz2_row"
+    },
+    appStore: {
+      url: "https://apps.apple.com/us/app/plants-vs-zombies-2/id597986893",
+      category: "Games",
+      developer: "Electronic Arts",
+      rating: null,
+      reviews: null,
+      note: "La puntuación de esta base se toma de Google Play hasta capturar el resumen equivalente de App Store."
+    },
+    evidence: "La ficha oficial describe la defensa contra zombis a través de distintas épocas y mundos.",
+    purchases: { enabled: true, label: "Tiene compras dentro del juego", note: "Incluye compras opcionales de plantas, recursos y potenciadores." },
+    videos: { ad: null, gameplay: null }
   }
 ];

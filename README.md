@@ -15,6 +15,8 @@ Los datos de tiendas incluidos son una captura consultada el 13 de octubre de 20
 
 ## Juegos incluidos
 
-Gardenscapes, Homescapes, Sled Surfers, Royal Match y Candy Crush Saga.
+Gardenscapes, Homescapes, Sled Surfers, Royal Match, Candy Crush Saga, Angry Birds 2 y Plants vs. Zombies 2.
 
-La página es estática por ahora. Para actualizar el catálogo automáticamente haría falta un proceso backend que consulte APIs o fuentes autorizadas de cada tienda y guarde el historial de cambios.
+La página es estática por ahora. Los comentarios de la comunidad se guardan en el `localStorage` del navegador; para compartirlos entre personas haría falta un backend con moderación. Para actualizar el catálogo automáticamente haría falta un proceso backend que consulte APIs o fuentes autorizadas de cada tienda y guarde el historial de cambios.
+
+La comunidad también puede agregar juegos desde la sección “Agregar juego”. Estas aportaciones se guardan en el `localStorage` del navegador y aparecen en el catálogo con la marca “Aportación comunitaria” hasta que se conecte un backend compartido y un flujo de revisión.
