@@ -33,7 +33,7 @@ window.gameDatabase = [
     },
     evidence: "La descripción oficial de Google Play identifica el match-3 como mecánica principal.",
     purchases: { enabled: true, label: "Tiene compras dentro del juego", note: "Puedes pagar para conseguir monedas, vidas o ayudas." },
-    videos: { ad: "iOziEA06a40", gameplay: "yKl1dr20lk4" }
+    videos: { ad: "d5kokGATZHw", gameplay: "yKl1dr20lk4" }
   },
   {
     id: "homescapes",
@@ -69,7 +69,7 @@ window.gameDatabase = [
     },
     evidence: "La descripción oficial de Google Play presenta la reforma de la casa y los puzzles match-3 como bucle del juego.",
     purchases: { enabled: true, label: "Tiene compras dentro del juego", note: "Puede pedir dinero real para avanzar o conseguir estrellas." },
-    videos: { ad: "uKfooCY2GEw", gameplay: "Er4ePaE5jHs" }
+    videos: { ad: "0edZofuIGNs", gameplay: "Er4ePaE5jHs" }
   },
   {
     id: "sled-surfers",
@@ -105,7 +105,7 @@ window.gameDatabase = [
     },
     evidence: "La ficha de Google Play confirma desarrollador, clasificación, volumen de reseñas y descargas; no se marca engaño sin evidencia del anuncio.",
     purchases: { enabled: true, label: "Tiene compras dentro del juego", note: "Incluye compras y anuncios; algunas reseñas mencionan pagar por tickets." },
-    videos: { ad: null, gameplay: "4odMDPEa_Fk" }
+    videos: { ad: "f5gbkoIyQm0", gameplay: "4odMDPEa_Fk" }
   },
   {
     id: "royal-match",
@@ -141,7 +141,7 @@ window.gameDatabase = [
     },
     evidence: "La descripción oficial de Google Play define puzzles y decoración del castillo; el veredicto de anuncios requiere revisar creatividades concretas.",
     purchases: { enabled: true, label: "Tiene compras dentro del juego", note: "Incluye compras de elementos o ayudas para progresar." },
-    videos: { ad: null, gameplay: null }
+    videos: { ad: "EpVQ3WAaUAc", gameplay: "iSaTx0T9GFw" }
   },
   {
     id: "candy-crush-saga",
@@ -177,13 +177,13 @@ window.gameDatabase = [
     },
     evidence: "La ficha oficial de Google Play describe explícitamente el match-3 como mecánica central.",
     purchases: { enabled: true, label: "Tiene compras dentro del juego", note: "Incluye compras y anuncios dentro de la aplicación." },
-    videos: { ad: "wArR2NAGtCA", gameplay: "yKl1dr20lk4" }
+    videos: { ad: "BWBZRgZmV-s", gameplay: "BCVCPo699Dc" }
   },
   {
     id: "angry-birds-2",
     name: "Angry Birds 2",
     category: "supervivencia",
-    image: "https://upload.wikimedia.org/wikipedia/en/d/d4/Angry_Birds_2_screenshot.png",
+    image: "assets/angry-birds-2.jpg",
     status: "Por revisar",
     statusClass: "neutral",
     score: "4,2",
@@ -213,13 +213,13 @@ window.gameDatabase = [
     },
     evidence: "La ficha oficial confirma los niveles de lanzamiento, las físicas y la progresión mediante mejoras.",
     purchases: { enabled: true, label: "Tiene compras dentro del juego", note: "Incluye compras opcionales para conseguir recursos o ventajas." },
-    videos: { ad: null, gameplay: null }
+    videos: { ad: "1faK9XcvB0U", gameplay: "0Dj2x7zZwvU" }
   },
   {
     id: "plants-vs-zombies-2",
     name: "Plants vs. Zombies 2",
     category: "supervivencia",
-    image: "assets/angry-birds-2.jpg",
+    image: "assets/plants-vs-zombies-2.jpg",
     status: "Por revisar",
     statusClass: "neutral",
     score: "4,4",
@@ -249,6 +249,111 @@ window.gameDatabase = [
     },
     evidence: "La ficha oficial describe la defensa contra zombis a través de distintas épocas y mundos.",
     purchases: { enabled: true, label: "Tiene compras dentro del juego", note: "Incluye compras opcionales de plantas, recursos y potenciadores." },
-    videos: { ad: null, gameplay: null }
+    videos: { ad: null, gameplay: "TIUGQr-yNyw" }
+  },
+  {
+    id: "gossip-harbor",
+    name: "Gossip Harbor",
+    category: "ciudad",
+    image: "assets/gossip-harbor.jpg",
+    status: "Por revisar",
+    statusClass: "neutral",
+    score: "Sin valorar",
+    reviews: "Catálogo nuevo",
+    promised: "Descubrir secretos y reconstruir el puerto",
+    real: "Combinar objetos, completar pedidos y mejorar el puerto",
+    stars: "☆☆☆☆☆",
+    review: "Ficha añadida al catálogo. Falta verificar un anuncio concreto frente a una partida real.",
+    by: "Aportación de AdTrap",
+    developer: "Por verificar",
+    googlePlay: { packageId: "", rating: 0, reviews: 0, downloads: "Pendiente", updated: "", description: "", url: "#" },
+    appStore: { url: "#", category: "Games", developer: "Por verificar", rating: null, reviews: null, note: "Datos pendientes de verificación." },
+    evidence: "Pendiente de recopilar una captura o video del anuncio.",
+    purchases: { enabled: true, label: "Compras por verificar", note: "Revisa antes de pagar dentro del juego." },
+    videos: { ad: "Q49W3ByVFcs", gameplay: "UGOJ_bSvTHU" }
+  },
+  {
+    id: "idle-guy",
+    name: "Idle Guy",
+    category: "supervivencia",
+    image: "assets/idle-guy.jpg",
+    status: "Por revisar",
+    statusClass: "neutral",
+    score: "Sin valorar",
+    reviews: "Catálogo nuevo",
+    promised: "Empezar desde cero y construir una nueva vida",
+    real: "Progresar con mejoras automáticas y recursos",
+    stars: "☆☆☆☆☆",
+    review: "Ficha añadida al catálogo. Falta verificar un anuncio concreto frente a una partida real.",
+    by: "Aportación de AdTrap",
+    developer: "Por verificar",
+    googlePlay: { packageId: "", rating: 0, reviews: 0, downloads: "Pendiente", updated: "", description: "", url: "#" },
+    appStore: { url: "#", category: "Games", developer: "Por verificar", rating: null, reviews: null, note: "Datos pendientes de verificación." },
+    evidence: "Pendiente de recopilar una captura o video del anuncio.",
+    purchases: { enabled: true, label: "Compras por verificar", note: "Revisa antes de pagar dentro del juego." },
+    videos: { ad: null, gameplay: "qjOdOnTuqbQ" }
+  },
+  {
+    id: "brain-puzzle-1",
+    name: "Brain Puzzle 1",
+    category: "puzzle",
+    image: "assets/brain-puzzle-1.jpg",
+    status: "Por revisar",
+    statusClass: "neutral",
+    score: "Sin valorar",
+    reviews: "Catálogo nuevo",
+    promised: "Resolver retos de lógica con una respuesta inesperada",
+    real: "Completar acertijos y niveles de lógica",
+    stars: "☆☆☆☆☆",
+    review: "Ficha añadida al catálogo. Falta verificar un anuncio concreto frente a una partida real.",
+    by: "Aportación de AdTrap",
+    developer: "Por verificar",
+    googlePlay: { packageId: "", rating: 0, reviews: 0, downloads: "Pendiente", updated: "", description: "", url: "#" },
+    appStore: { url: "#", category: "Games", developer: "Por verificar", rating: null, reviews: null, note: "Datos pendientes de verificación." },
+    evidence: "Pendiente de recopilar una captura o video del anuncio.",
+    purchases: { enabled: false, label: "Compras por verificar", note: "Revisa antes de pagar dentro del juego." },
+    videos: { ad: "iSNUh8KMFp8", gameplay: "ogR0ll0Af1U" }
+  },
+  {
+    id: "brain-puzzle-2",
+    name: "Brain Puzzle 2",
+    category: "puzzle",
+    image: "assets/brain-puzzle-2.jpg",
+    status: "Por revisar",
+    statusClass: "neutral",
+    score: "Sin valorar",
+    reviews: "Catálogo nuevo",
+    promised: "Encontrar la solución usando la imaginación",
+    real: "Resolver acertijos visuales y completar niveles",
+    stars: "☆☆☆☆☆",
+    review: "Ficha añadida al catálogo. Falta verificar un anuncio concreto frente a una partida real.",
+    by: "Aportación de AdTrap",
+    developer: "Por verificar",
+    googlePlay: { packageId: "", rating: 0, reviews: 0, downloads: "Pendiente", updated: "", description: "", url: "#" },
+    appStore: { url: "#", category: "Games", developer: "Por verificar", rating: null, reviews: null, note: "Datos pendientes de verificación." },
+    evidence: "Pendiente de recopilar una captura o video del anuncio.",
+    purchases: { enabled: false, label: "Compras por verificar", note: "Revisa antes de pagar dentro del juego." },
+    videos: { ad: null, gameplay: "diDhAz-Qdmw" }
+  },
+  {
+    id: "brain-puzzle-3",
+    name: "Brain Puzzle 3",
+    category: "puzzle",
+    image: "assets/brain-puzzle-3.jpg",
+    status: "Por revisar",
+    statusClass: "neutral",
+    score: "Sin valorar",
+    reviews: "Catálogo nuevo",
+    promised: "Superar pruebas mentales cada vez más difíciles",
+    real: "Resolver puzzles cortos de lógica y observación",
+    stars: "☆☆☆☆☆",
+    review: "Ficha añadida al catálogo. Falta verificar un anuncio concreto frente a una partida real.",
+    by: "Aportación de AdTrap",
+    developer: "Por verificar",
+    googlePlay: { packageId: "", rating: 0, reviews: 0, downloads: "Pendiente", updated: "", description: "", url: "#" },
+    appStore: { url: "#", category: "Games", developer: "Por verificar", rating: null, reviews: null, note: "Datos pendientes de verificación." },
+    evidence: "Pendiente de recopilar una captura o video del anuncio.",
+    purchases: { enabled: false, label: "Compras por verificar", note: "Revisa antes de pagar dentro del juego." },
+    videos: { ad: "UPwxquQCGRg", gameplay: "RWuArhIysTQ" }
   }
 ];
