@@ -1,2 +1,6 @@
 adtrap.sqlite3
 __pycache__/
+media/videos/*
+!media/videos/.gitkeep
+*.env
+*.log
